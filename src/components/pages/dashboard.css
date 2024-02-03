@@ -4,5 +4,62 @@
     background-color: #9e9e9e;
     margin: auto;
     border-radius: 15px;
-    padding: 30px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.selector {
+    margin: 15px;
+    margin-bottom: 0px;
+}
+
+.Data {
+    background-color: black;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.Chart {
+    background-color: #9e9e9e;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Symptoms {
+    background-color: #9e9e9e;
+    /* background-color: red; */
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+.Title {
+    /* background-color: red; */
+}
+
+.Potential {
+    text-align: left;
+    font-size: 16px;
+    margin: 0px;
+    /* background-color: blue; */
+}
+
+.Spacer {
+    flex: 1;
+    height: 100%;
+    /* background-color: black; */
+}
+
+li {
+    margin-bottom: 10px;
 }

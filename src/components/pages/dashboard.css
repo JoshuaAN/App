@@ -1,0 +1,8 @@
+.dashboard {
+    width: 1190px;
+    height: 540px;
+    background-color: #9e9e9e;
+    margin: auto;
+    border-radius: 15px;
+    padding: 30px;
+}

@@ -50,7 +50,7 @@ const BarcodeScanner: React.FC = ({ onSelectionChange }) => {
 
   return (
     <div>
-      <video id="barcode-scanner-preview" style={{ width: '100%' }}></video>
+      <video id="barcode-scanner-preview" style={{ width: 500 }}></video>
       {/* {error && <div>Error: {error}</div>} */}
       {/* {latestBarcode && <div>{latestBarcode}</div>} */}
     </div>

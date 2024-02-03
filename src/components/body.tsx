@@ -5,6 +5,8 @@ import MyForm from './pages/health';
 // import BarcodeScanner from './pages/selector';
 import FoodSearch from './pages/lookup';
 import BarcodeScanner from './pages/scanner';
+import { Container, TextField, MenuItem, Typography, Button, Box } from '@mui/material';
+import RestaurantList from "./pages/list";
 
 interface BodyProps {
   currentPage: string; // Or use an enum if you have a fixed set of pages
@@ -34,10 +36,22 @@ const Body: React.FC<BodyProps> = ({ currentPage }) => {
       break;
     case 'Add Meal':
       PageComponent = 
-        <div>
-          <BarcodeScanner onSelectionChange={handleNavbarButtonClick}></BarcodeScanner>
-          <FoodSearch barcode={activeButton}></FoodSearch>
-          <p>{activeButton}</p>
+        <div className="Row">
+          <div className="Restuarant">
+            <RestaurantList></RestaurantList>
+          </div>
+          <div className="Barcode">
+          <div className="HUH">
+            <BarcodeScanner onSelectionChange={handleNavbarButtonClick}></BarcodeScanner>
+            <FoodSearch barcode={activeButton}></FoodSearch>
+          </div>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            sx={{ mt: 3, mb: 2 }}
+          >Add Food</Button>
+        </div>
         </div>
       break;
     default:

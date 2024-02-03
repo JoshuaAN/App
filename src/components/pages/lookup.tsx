@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface FoodSerchProps {
     barcode: string; // Or use an enum if you have a fixed set of pages
@@ -9,13 +9,16 @@ const FoodSearch = ({ barcode }) => {
   const [foods, setFoods] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-
-  const handleSearch = async (e) => {
-    let c = false;
+  
+  useEffect(() => {
+    // This function will run whenever `propValue` changes
+    const handlePropChange = () => {
+      console.log('Prop has changed to: ', barcode);
+      const fetchData = async () => {
+        let c = false;
     let p = 0;
 
     while (!c && p < 5) {
-        e.preventDefault(); // Prevent form submission from reloading the page
         setLoading(true);
         setError('');
         const apiKey = "WvJcUpdiej9dX4GGDhFS6ceCzZxmwUg9SetWsqvt"; // Use environment variable in production
@@ -40,15 +43,20 @@ const FoodSearch = ({ barcode }) => {
 
         p += 1;
     }
-  };
+      };
+  
+      // Call the async function
+      if (barcode != "Test") {
+        fetchData();
+      }
+      // You can place more code here to do something when `propValue` changes
+    };
+
+    handlePropChange();
+  }, [barcode]);
 
   return (
     <div>
-      <form onSubmit={handleSearch}>
-        <button type="submit" disabled={loading}>
-          Search
-        </button>
-      </form>
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
         {foods.map((food, index) => (

@@ -9,3 +9,32 @@
 .text {
     padding: 20px;
 }
+
+.Row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50em;
+}
+
+.HUH {
+    height: 18em;
+}
+
+.Restuarant {
+    background-color: #9e9e9e;
+    padding: 30px;
+    border-radius: 15px;
+    width: 20em;
+    height: 20em;
+}
+
+.Barcode {
+    background-color: #9e9e9e;
+    padding: 30px;
+    border-radius: 15px;
+    width: 20em;
+    height: 20em;
+}

@@ -35,22 +35,46 @@ export const options = {
   },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 export const data = {
   labels,
   datasets: [
     {
-      label: 'Dataset 1',
+      label: 'Calcium',
       data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      borderColor: 'rgb(175, 0, 0)',
+      backgroundColor: 'rgba(175, 0, 0, 0.2)',
     },
     {
-      label: 'Dataset 2',
+      label: 'Iron',
       data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
-      borderColor: 'rgb(53, 162, 235)',
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+      borderColor: 'rgb(0, 175, 0)',
+      backgroundColor: 'rgba(0, 175, 0, 0.2)',
+    },
+    {
+      label: 'Vitamin B12',
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
+      borderColor: 'rgb(0, 0, 175)',
+      backgroundColor: 'rgba(0, 0, 175, 0.2)',
+    },
+    {
+      label: 'Vitamin D',
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
+      borderColor: 'rgb(175, 175, 0)',
+      backgroundColor: 'rgba(175, 175, 0, 0.2)',
+    },
+    {
+      label: 'Magnesium',
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
+      borderColor: 'rgb(0, 175, 175)',
+      backgroundColor: 'rgba(0, 175, 175, 0.2)',
+    },
+    {
+      label: 'Vitamin D',
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
+      borderColor: 'rgb(175, 0, 175)',
+      backgroundColor: 'rgba(175, 0, 175, 0.2)',
     },
   ],
 };
